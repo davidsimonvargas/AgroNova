@@ -23,6 +23,9 @@ src/
 2. Usar `Git` para cada cambio importante
 3. La base de datos esw SQlite (./db/<nombre>`.db`) > el nombre del archivo db sea referente al nombre del proyecto.
 4. Todo el codigo debera ser generado dentro de mi carpeta `scr`
+5. Basa tus estilos en reglas de ux/ui y los colores del logo que tengo en la carpeta `assets`
+
+---
 
 ## Agente 1: Constructor
 ### Rol:
@@ -36,6 +39,12 @@ src/
 - `AGENTES.md`
 - `IA/HISTORIA.md`
 - `IA/BASEDATOS.md`
+### Donde va cada cosa:
+- modelos - `src/models` (ya creado por @Arquitecto)
+- Componentes - `src/componets`(crear uno por componente)
+- Estados - `src/states` (logica estado)
+- Pginas - `src/pages` (paginas completas)
+- App principal `src/main.py`(registrar paginas)
 ### NO debe hacer:
 - Modificar la estructura de datos
 - Marcar tareas como completadas
@@ -70,7 +79,8 @@ Prepara el entorno de desarrollo y la base de datos desde cero
 ### Respnsabilidad:
 - Crear el entorno virtual del python
 - Instalar reflex y dependencias
-- Inicializar el proycto con reflex
+- Inicializar el proyecto con reflex
+- inicializar y mantener la estructura de carpetas ordenadas
 - Configurar la base de datos en SQlite
 - Crear los modelos segun `IA/BASEDATOS.md`
 - Hacer el commit inicial con git
