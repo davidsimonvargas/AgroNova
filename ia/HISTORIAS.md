@@ -4,43 +4,43 @@
 **Como** usuario registrado, **quiero** iniciar sesión, **para** acceder a la información y funcionalidades de Agronova según mi rol
 
 ### Tareas pendientes
-- [ ] El sistema valida las credenciales
-- [ ] El sistema crea una sesión activa
-- [ ] El usuario es redirigido al panel principal
-- [ ] El sistema muestra un mensaje de bienvenida
-- [ ] El sistema registra la fecha y hora de acceso
-- [ ] El acceso es rechazado
-- [ ] Se muestra el mensaje:
-- [ ] El usuario permanece en la pantalla de inicio de sesión
-- [ ] El sistema resalta los campos incompletos
-- [ ] El sistema informa qué dato falta completar
-- [ ] No se permite el envío del formulario
-- [ ] El sistema informa que se requiere conexión
-- [ ] Se ofrece reintentar la autenticación
-**Estado:** Pendiente
+- [x] El sistema valida las credenciales
+- [x] El sistema crea una sesión activa
+- [x] El usuario es redirigido al panel principal
+- [x] El sistema muestra un mensaje de bienvenida
+- [x] El sistema registra la fecha y hora de acceso
+- [x] El acceso es rechazado
+- [x] Se muestra el mensaje:
+- [x] El usuario permanece en la pantalla de inicio de sesión
+- [x] El sistema resalta los campos incompletos
+- [x] El sistema informa qué dato falta completar
+- [x] No se permite el envío del formulario
+- [x] El sistema informa que se requiere conexión
+- [x] Se ofrece reintentar la autenticación
+**Estado:** Completado
 ---
 ## HU-002: Cerrar Sesión
 **Como** usuario autenticado, **quiero** cerrar sesión, **para** proteger mi información
 
 ### Tareas pendientes
-- [ ] El sistema elimina la sesión
-- [ ] El usuario es redirigido a la pantalla de acceso
-- [ ] Los datos sensibles dejan de estar accesibles
+- [x] El sistema elimina la sesión
+- [x] El usuario es redirigido a la pantalla de acceso
+- [x] Los datos sensibles dejan de estar accesibles
 - [ ] El sistema informa la existencia de datos pendientes
 - [ ] El usuario puede cancelar o continuar
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## HU-003: Actualizar Perfil
 **Como** usuario, **quiero** actualizar mis datos personales, **para** mantener mi información actualizada
 
 ### Tareas pendientes
-- [ ] Los cambios son guardados
-- [ ] El sistema muestra confirmación
-- [ ] La información actualizada aparece inmediatamente
-- [ ] El sistema identifica el error
-- [ ] Indica claramente qué campo debe corregirse
-- [ ] No guarda cambios inconsistentes
-**Estado:** Pendiente
+- [x] Los cambios son guardados
+- [x] El sistema muestra confirmación
+- [x] La información actualizada aparece inmediatamente
+- [x] El sistema identifica el error
+- [x] Indica claramente qué campo debe corregirse
+- [x] No guarda cambios inconsistentes
+**Estado:** Completado
 ---
 ## ÉPICA 2: GESTIÓN DE PARCELAS
 ---
@@ -48,51 +48,51 @@
 **Como** agricultor, **quiero** registrar una parcela, **para** gestionar mis cultivos de forma organizada
 
 ### Tareas pendientes
-- [ ] Nombre de la parcela
-- [ ] Ubicación
-- [ ] Área
-- [ ] Tipo de suelo
-- [ ] El sistema guarda la información
-- [ ] La parcela aparece en la lista
-- [ ] El sistema informa los campos faltantes
-- [ ] No permite guardar el registro
+- [x] Nombre de la parcela
+- [x] Ubicación
+- [x] Área
+- [x] Tipo de suelo
+- [x] El sistema guarda la información
+- [x] La parcela aparece en la lista
+- [x] El sistema informa los campos faltantes
+- [x] No permite guardar el registro
 - [ ] El sistema guarda localmente la información
 - [ ] Marca el registro como pendiente de sincronización
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## HU-005: Consultar Parcelas
 **Como** agricultor, **quiero** visualizar mis parcelas registradas, **para** consultar información rápidamente
 
 ### Tareas pendientes
-- [ ] Se muestra una lista de parcelas
-- [ ] Cada registro muestra:
-- [ ] Nombre
-- [ ] Área
+- [x] Se muestra una lista de parcelas
+- [x] Cada registro muestra:
+- [x] Nombre
+- [x] Área
 - [ ] Estado
 - [ ] Cultivos asociados
-- [ ] Los resultados se filtran en tiempo real
-**Estado:** Pendiente
+- [x] Los resultados se filtran en tiempo real
+**Estado:** Parcial
 ---
 ## HU-006: Actualizar Parcela
 **Como** agricultor, **quiero** modificar la información de una parcela, **para** mantener datos actualizados
 
 ### Tareas pendientes
-- [ ] Permitir editar únicamente parcelas propias
-- [ ] Mostrar información actual antes de editar
-- [ ] Validar datos obligatorios
-- [ ] Confirmar actualización exitosa
+- [x] Permitir editar únicamente parcelas propias
+- [x] Mostrar información actual antes de editar
+- [x] Validar datos obligatorios
+- [x] Confirmar actualización exitosa
 - [ ] Sincronizar cambios cuando exista conexión
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## HU-007: Eliminar Parcela
 **Como** agricultor, **quiero** eliminar una parcela, **para** mantener organizado mi registro agrícola
 
 ### Tareas pendientes
-- [ ] Solicitar confirmación antes de eliminar
+- [x] Solicitar confirmación antes de eliminar
 - [ ] Advertir si existen cultivos asociados
 - [ ] Eliminar lógicamente el registro
 - [ ] Mantener trazabilidad histórica
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## ÉPICA 3: GESTIÓN DE CULTIVOS
 ---
@@ -100,49 +100,49 @@
 **Como** agricultor, **quiero** registrar un cultivo, **para** realizar seguimiento de su desarrollo
 
 ### Tareas pendientes
-- [ ] Nombre del cultivo
-- [ ] Variedad
-- [ ] Fecha de siembra
-- [ ] Parcela asociada
-- [ ] Área sembrada
-- [ ] Estado inicial
-- [ ] Validar que exista una parcela disponible
-- [ ] Guardar el cultivo
-- [ ] Relacionarlo con la parcela correspondiente
+- [x] Nombre del cultivo
+- [x] Variedad
+- [x] Fecha de siembra
+- [x] Parcela asociada
+- [x] Área sembrada
+- [x] Estado inicial
+- [x] Validar que exista una parcela disponible
+- [x] Guardar el cultivo
+- [x] Relacionarlo con la parcela correspondiente
 - [ ] Permitir funcionamiento offline
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## HU-009: Consultar Cultivos
 **Como** agricultor, **quiero** consultar cultivos, **para** consultar información de mis cultivos
 
 ### Tareas pendientes
-- [ ] Mostrar listado de cultivos
-- [ ] Permitir búsqueda
+- [x] Mostrar listado de cultivos
+- [x] Permitir búsqueda
 - [ ] Permitir filtros por:
 - [ ] Parcela
 - [ ] Estado
 - [ ] Fecha de siembra
-- [ ] Mostrar indicadores visuales de estado
-**Estado:** Pendiente
+- [x] Mostrar indicadores visuales de estado
+**Estado:** Parcial
 ---
 ## HU-010: Actualizar Cultivo
 **Como** agricultor, **quiero** actualizar cultivo, **para** mantener datos actualizados
 
 ### Tareas pendientes
-- [ ] Permitir modificar información agronómica
+- [x] Permitir modificar información agronómica
 - [ ] Registrar fecha de actualización
 - [ ] Mantener historial de cambios
-- [ ] Validar coherencia de datos
-**Estado:** Pendiente
+- [x] Validar coherencia de datos
+**Estado:** Parcial
 ---
 ## HU-011: Eliminar Cultivo
 **Como** agricultor, **quiero** eliminar cultivo, **para** mantener organizado mi registro
 
 ### Tareas pendientes
-- [ ] Solicitar confirmación
+- [x] Solicitar confirmación
 - [ ] Mantener historial
-- [ ] No eliminar actividades registradas
-**Estado:** Pendiente
+- [x] No eliminar actividades registradas
+**Estado:** Parcial
 ---
 ## ÉPICA 4: ACTIVIDADES AGRÍCOLAS
 ---
@@ -150,26 +150,26 @@
 **Como** agricultor, **quiero** registrar riegos, **para** llevar control hídrico de mis cultivos
 
 ### Tareas pendientes
-- [ ] Seleccionar cultivo
-- [ ] Registrar fecha
+- [x] Seleccionar cultivo
+- [x] Registrar fecha
 - [ ] Registrar cantidad de agua
 - [ ] Registrar método de riego
-- [ ] Guardar observaciones
-- [ ] Registrar usuario responsable
+- [x] Guardar observaciones
+- [x] Registrar usuario responsable
 - [ ] Permitir uso offline
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## HU-013: Registrar Fertilización
 **Como** agricultor, **quiero** registrar fertilización, **para** llevar control de mis actividades
 
 ### Tareas pendientes
-- [ ] Seleccionar cultivo
+- [x] Seleccionar cultivo
 - [ ] Registrar fertilizante utilizado
 - [ ] Registrar dosis
-- [ ] Registrar fecha
-- [ ] Registrar responsable
+- [x] Registrar fecha
+- [x] Registrar responsable
 - [ ] Guardar historial permanente
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## HU-014: Registrar Aplicación de Pesticidas
 **Como** agricultor, **quiero** registrar aplicación de pesticidas, **para** llevar control de mis actividades
@@ -177,43 +177,43 @@
 ### Tareas pendientes
 - [ ] Registrar producto
 - [ ] Registrar dosis
-- [ ] Registrar fecha
+- [x] Registrar fecha
 - [ ] Registrar motivo de aplicación
-- [ ] Registrar observaciones
+- [x] Registrar observaciones
 - [ ] Asociar evidencia fotográfica
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## HU-015: Registrar Poda
 **Como** agricultor, **quiero** registrar poda, **para** llevar control de mis actividades
 
 ### Tareas pendientes
-- [ ] Registrar fecha
+- [x] Registrar fecha
 - [ ] Registrar tipo de poda
-- [ ] Registrar observaciones
-- [ ] Registrar responsable
-**Estado:** Pendiente
+- [x] Registrar observaciones
+- [x] Registrar responsable
+**Estado:** Parcial
 ---
 ## HU-016: Registrar Cosecha
 **Como** agricultor, **quiero** registrar cosecha, **para** llevar control de mis actividades
 
 ### Tareas pendientes
-- [ ] Registrar fecha
+- [x] Registrar fecha
 - [ ] Registrar cantidad cosechada
 - [ ] Registrar unidad de medida
 - [ ] Registrar calidad obtenida
-- [ ] Registrar observaciones
+- [x] Registrar observaciones
 - [ ] Actualizar indicadores productivos
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## HU-017: Consultar Historial de Actividades
 **Como** agricultor, **quiero** consultar historial de actividades, **para** consultar información de mis cultivos
 
 ### Tareas pendientes
-- [ ] Mostrar línea temporal de actividades
-- [ ] Permitir filtros
-- [ ] Mostrar usuario responsable
+- [x] Mostrar línea temporal de actividades
+- [x] Permitir filtros
+- [x] Mostrar usuario responsable
 - [ ] Mostrar evidencias asociadas
-**Estado:** Pendiente
+**Estado:** Parcial
 ---
 ## ÉPICA 5: MONITOREO
 ---

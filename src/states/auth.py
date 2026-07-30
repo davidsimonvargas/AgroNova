@@ -14,12 +14,19 @@ class AuthState(rx.State):
     usuario_nombre: str = ""
     usuario_rol: str = ""
     campos_faltantes: list[str] = []
+    ultimo_acceso: str = ""
+    mensaje_bienvenida: str = ""
+    offline: bool = False
+    mostrar_contraseña: bool = False
 
     def set_correo(self, value: str):
         self.correo = value
 
     def set_contraseña(self, value: str):
         self.contraseña = value
+
+    def toggle_mostrar_contraseña(self):
+        self.mostrar_contraseña = not self.mostrar_contraseña
 
     @rx.var(cache=True)
     def autenticado(self) -> bool:
@@ -34,9 +41,14 @@ class AuthState(rx.State):
         self.campos_faltantes = faltantes
         return len(faltantes) == 0
 
+    def check_offline(self):
+        self.offline = True
+        self.error = "Sin conexión a internet. Verifica tu conexión e intenta de nuevo."
+
     def login(self):
         self.error = ""
         self.campos_faltantes = []
+        self.mensaje_bienvenida = ""
 
         if not self.validar_campos():
             return
@@ -58,6 +70,8 @@ class AuthState(rx.State):
                     self.usuario_id = result.id_usuario
                     self.usuario_nombre = f"{result.nombres} {result.apellidos}"
                     self.usuario_rol = result.rol
+                    self.ultimo_acceso = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
+                    self.mensaje_bienvenida = f"¡Bienvenido, {result.nombres}! Has iniciado sesión el {self.ultimo_acceso}."
                     self.correo = ""
                     self.contraseña = ""
                     return rx.redirect("/dashboard")
@@ -73,4 +87,6 @@ class AuthState(rx.State):
         self.correo = ""
         self.contraseña = ""
         self.error = ""
+        self.ultimo_acceso = ""
+        self.mensaje_bienvenida = ""
         return rx.redirect("/")

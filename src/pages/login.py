@@ -15,8 +15,10 @@ def input_correo() -> rx.Component:
         type="email",
         value=AuthState.correo,
         on_change=AuthState.set_correo,
+        variant="soft",
+        color="black",
         width="100%",
-        padding="0.75rem 1rem",
+        padding="5px 14px",
         border="1px solid #E2E8F0",
         border_radius="8px",
         font_size="0.95rem",
@@ -26,18 +28,38 @@ def input_correo() -> rx.Component:
 
 
 def input_contraseña() -> rx.Component:
-    return rx.input(
-        placeholder="Ingresa tu contraseña",
-        type="password",
-        value=AuthState.contraseña,
-        on_change=AuthState.set_contraseña,
+    return rx.hstack(
+        rx.input(
+            placeholder="Ingresa tu contraseña",
+            type=rx.cond(AuthState.mostrar_contraseña, "text", "password"),
+            value=AuthState.contraseña,
+            on_change=AuthState.set_contraseña,
+            variant="soft",
+            color="black",
+            width="100%",
+            padding="5px 14px",
+            border="1px solid #E2E8F0",
+            border_radius="8px",
+            font_size="0.95rem",
+            outline="none",
+            _focus={"border_color": VERDE, "box_shadow": "0 0 0 3px rgba(76, 180, 60, 0.15)"},
+        ),
+        rx.button(
+            rx.cond(
+                AuthState.mostrar_contraseña,
+                rx.icon(tag="eye-off", color=TEAL),
+                rx.icon(tag="eye", color=TEAL),
+            ),
+            on_click=AuthState.toggle_mostrar_contraseña,
+            bg="transparent",
+            border="none",
+            cursor="pointer",
+            padding="0.5rem",
+            _hover={"opacity": "0.7"},
+        ),
         width="100%",
-        padding="0.75rem 1rem",
-        border="1px solid #E2E8F0",
-        border_radius="8px",
-        font_size="0.95rem",
-        outline="none",
-        _focus={"border_color": VERDE, "box_shadow": "0 0 0 3px rgba(76, 180, 60, 0.15)"},
+        align="center",
+        spacing="0",
     )
 
 
@@ -105,6 +127,24 @@ def login_page() -> rx.Component:
                             font_weight="600",
                             cursor="pointer",
                             _hover={"bg": "#3D9B30"},
+                        ),
+                        rx.cond(
+                            AuthState.offline,
+                            rx.button(
+                                "Reintentar",
+                                on_click=AuthState.login,
+                                width="100%",
+                                padding="0.75rem",
+                                bg=TEAL,
+                                color=BLANCO,
+                                border="none",
+                                border_radius="8px",
+                                font_size="1rem",
+                                font_weight="600",
+                                cursor="pointer",
+                                margin_top="0.5rem",
+                                _hover={"bg": "#0F5264"},
+                            ),
                         ),
                         rx.box(height="0.5rem"),
                         rx.text(
