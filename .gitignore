@@ -1,5 +1,4 @@
 assets/external/
-*.db
 .states
 *.py[cod]
 .web
